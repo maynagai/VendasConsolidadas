@@ -1,0 +1,42 @@
+ [
+    {
+      "Id": "2317b6ca-6748-4806-9688-84669304ef2d",
+      "Nome": "Cliente 1"
+    },
+    {
+      "Id": "d6072de5-4f25-4ed3-a3eb-def8d18ff529",
+      "Nome": "Cliente 2"
+    },
+    {
+      "Id": "e02d7cb6-09fd-4bc1-a8b8-bfcad8860a68",
+      "Nome": "Cliente 3"
+    },
+    {
+      "Id": "98093870-1671-4f90-b6c1-d64a4ba93bfe",
+      "Nome": "Cliente 4"
+    },
+    {
+      "Id": "47f3286b-0c4e-4db6-9e17-364699b5df43",
+      "Nome": "Cliente 5"
+    },
+    {
+      "Id": "a78bc5e4-5347-48fa-afc0-d9cf26f7a895",
+      "Nome": "Cliente 6"
+    },
+    {
+      "Id": "2b8257f6-85f3-4b5b-bc80-ac94c2733d17",
+      "Nome": "Cliente 7"
+    },
+    {
+      "Id": "b96643ce-390b-43ef-9102-3465d061a938",
+      "Nome": "Cliente 8"
+    },
+    {
+      "Id": "b4c19754-8088-4eca-8555-c5078ae1689e",
+      "Nome": "Cliente 9"
+    },
+    {
+      "Id": "0bc441cd-446b-4574-97a7-a34bf0813810",
+      "Nome": "Cliente 10"
+    }
+  ]

@@ -1,0 +1,122 @@
+ [
+    {
+      "Id": "dca84809-4f4c-4f9a-87d7-58abf8b2465c",
+      "ClienteId": "47f3286b-0c4e-4db6-9e17-364699b5df43",
+      "Nome": "Empresa 1",
+      "CNPJ": "95122621178919"
+    },
+    {
+      "Id": "b9cf0528-7fa8-4344-8519-999f30fc78c6",
+      "ClienteId": "47f3286b-0c4e-4db6-9e17-364699b5df43",
+      "Nome": "Empresa 2",
+      "CNPJ": "52718067553089"
+    },
+    {
+      "Id": "da1356c7-03dc-4b5a-bdd3-d9c7cf6cc819",
+      "ClienteId": "0bc441cd-446b-4574-97a7-a34bf0813810",
+      "Nome": "Empresa 3",
+      "CNPJ": "48586074279158"
+    },
+    {
+      "Id": "dbf8e046-9bda-4ed1-b16d-de6e4da31824",
+      "ClienteId": "0bc441cd-446b-4574-97a7-a34bf0813810",
+      "Nome": "Empresa 4",
+      "CNPJ": "27141949263560"
+    },
+    {
+      "Id": "44e5e1f7-e2bd-4335-9190-67e51f1d7b8a",
+      "ClienteId": "2b8257f6-85f3-4b5b-bc80-ac94c2733d17",
+      "Nome": "Empresa 5",
+      "CNPJ": "62182356562908"
+    },
+    {
+      "Id": "20aba072-6e80-414a-a11f-1d9e68a1b196",
+      "ClienteId": "b96643ce-390b-43ef-9102-3465d061a938",
+      "Nome": "Empresa 6",
+      "CNPJ": "91164548847289"
+    },
+    {
+      "Id": "2ffd5924-b1f1-4b53-901f-1db10780c705",
+      "ClienteId": "b96643ce-390b-43ef-9102-3465d061a938",
+      "Nome": "Empresa 7",
+      "CNPJ": "64008063354479"
+    },
+    {
+      "Id": "69e7dace-4df0-4003-ba65-1394a134bd55",
+      "ClienteId": "2317b6ca-6748-4806-9688-84669304ef2d",
+      "Nome": "Empresa 8",
+      "CNPJ": "84454194896623"
+    },
+    {
+      "Id": "ca870db5-183b-4614-8850-d586e8c6ffc9",
+      "ClienteId": "b4c19754-8088-4eca-8555-c5078ae1689e",
+      "Nome": "Empresa 9",
+      "CNPJ": "97738293726821"
+    },
+    {
+      "Id": "747b221f-2e03-4ad6-8844-f5266f51ba0c",
+      "ClienteId": "98093870-1671-4f90-b6c1-d64a4ba93bfe",
+      "Nome": "Empresa 10",
+      "CNPJ": "24093510093612"
+    },
+    {
+      "Id": "f9a449d1-4b59-422a-83ae-02cf376e1c5e",
+      "ClienteId": "a78bc5e4-5347-48fa-afc0-d9cf26f7a895",
+      "Nome": "Empresa 11",
+      "CNPJ": "69672126798404"
+    },
+    {
+      "Id": "1f218684-9892-4d7e-bf50-1172a9ac62d8",
+      "ClienteId": "0bc441cd-446b-4574-97a7-a34bf0813810",
+      "Nome": "Empresa 12",
+      "CNPJ": "67030633982269"
+    },
+    {
+      "Id": "31ea12c2-043d-4a83-9a2e-da1745d450e8",
+      "ClienteId": "2b8257f6-85f3-4b5b-bc80-ac94c2733d17",
+      "Nome": "Empresa 13",
+      "CNPJ": "86561697303036"
+    },
+    {
+      "Id": "fcbd219b-497a-43d0-a07b-56564c3b4b6f",
+      "ClienteId": "d6072de5-4f25-4ed3-a3eb-def8d18ff529",
+      "Nome": "Empresa 14",
+      "CNPJ": "11606989089523"
+    },
+    {
+      "Id": "80a3e5b8-0d4f-47c2-bb87-365a0a49ddb8",
+      "ClienteId": "2b8257f6-85f3-4b5b-bc80-ac94c2733d17",
+      "Nome": "Empresa 15",
+      "CNPJ": "38946191741801"
+    },
+    {
+      "Id": "3b5beed7-a227-44d1-95f7-e6f6dfd69341",
+      "ClienteId": "47f3286b-0c4e-4db6-9e17-364699b5df43",
+      "Nome": "Empresa 16",
+      "CNPJ": "18289460309717"
+    },
+    {
+      "Id": "6e773c9a-1061-4fe1-a515-bdd69811c638",
+      "ClienteId": "e02d7cb6-09fd-4bc1-a8b8-bfcad8860a68",
+      "Nome": "Empresa 17",
+      "CNPJ": "68857665388356"
+    },
+    {
+      "Id": "38155a54-8de2-48c5-a76b-d1704f2a796f",
+      "ClienteId": "d6072de5-4f25-4ed3-a3eb-def8d18ff529",
+      "Nome": "Empresa 18",
+      "CNPJ": "24950872610834"
+    },
+    {
+      "Id": "1ab39a94-4f32-41f5-8ab1-95e5ee18cb5e",
+      "ClienteId": "47f3286b-0c4e-4db6-9e17-364699b5df43",
+      "Nome": "Empresa 19",
+      "CNPJ": "59056126120583"
+    },
+    {
+      "Id": "557f392b-16c7-44a8-8e17-d32446735878",
+      "ClienteId": "2b8257f6-85f3-4b5b-bc80-ac94c2733d17",
+      "Nome": "Empresa 20",
+      "CNPJ": "73761479044351"
+    }
+  ]

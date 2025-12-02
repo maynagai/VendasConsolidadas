@@ -1,0 +1,75 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "ConsolidacaoVendas",
+    "version": "1.0"
+  },
+  "paths": {
+    "/VendasConsolidadas/PostStart": {
+      "post": {
+        "tags": [
+          "VendasConsolidadas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/VendasConsolidadas/GetProgress": {
+      "get": {
+        "tags": [
+          "VendasConsolidadas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/VendasConsolidadas/GetLogs": {
+      "get": {
+        "tags": [
+          "VendasConsolidadas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/VendasConsolidadas/GetVendasConsolidadas": {
+      "get": {
+        "tags": [
+          "VendasConsolidadas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/VendasConsolidadas/PostCancel": {
+      "post": {
+        "tags": [
+          "VendasConsolidadas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { },
+  "tags": [
+    {
+      "name": "VendasConsolidadas"
+    }
+  ]
+}
