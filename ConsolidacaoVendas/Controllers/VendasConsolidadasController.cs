@@ -18,7 +18,7 @@ namespace ConsolidacaoVendas.Controllers
         public IActionResult PostStart()
         {
             try {
-                _service.start();
+                _=_service.start();
                 return Accepted(new { message = "Processo de consolidação iniciado" });
             }
             catch (InvalidOperationException ex)
@@ -38,7 +38,7 @@ namespace ConsolidacaoVendas.Controllers
             return Ok();
         }
         [HttpGet("GetVendasConsolidadas")]
-        public IActionResult GetVendasConsolidadas()
+        public IActionResult GetVendasConsolidadas([FromQuery] DateTime? from, [FromQuery] DateTime? to, [FromQuery] string? empresa)
         {
             return Ok();
         }

@@ -946,11 +946,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\DesafioF360\\ConsolidacaoVendas\\ConsolidacaoVendas.csproj",
+      "projectUniqueName": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\ConsolidacaoVendas.csproj",
       "projectName": "ConsolidacaoVendas",
-      "projectPath": "D:\\Projetos\\DesafioF360\\ConsolidacaoVendas\\ConsolidacaoVendas.csproj",
+      "projectPath": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\ConsolidacaoVendas.csproj",
       "packagesPath": "C:\\Users\\mayla\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\DesafioF360\\ConsolidacaoVendas\\obj\\",
+      "outputPath": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
