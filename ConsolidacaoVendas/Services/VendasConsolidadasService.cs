@@ -38,6 +38,7 @@ namespace ConsolidacaoVendas.Services
 
             try
             {
+                progress.SetTotal(await repository.CountVendasAsync(ct));
                 using var cursor = repository.GetVendasCursor();
 
                 var batch = new List<VendaConsolidada>();
@@ -121,7 +122,17 @@ namespace ConsolidacaoVendas.Services
         }
 
         
-        public void Cancel(){}
+        public void Cancel()
+        {
+            lock (check)
+            {
+                if (running && cts != null && !cts.IsCancellationRequested)
+                {
+                    cts.Cancel();
+                    log.Add("Pedido de cancelamento enviado.");
+                }
+            }
+        }
 
 
         public IEnumerable<string> GetLogs() => log.GetAll();

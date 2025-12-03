@@ -6,6 +6,7 @@ namespace ConsolidacaoVendas.Repositories
     public interface IVendaConsolidadaRepository
     {
         IAsyncCursor<Venda> GetVendasCursor();
+        Task<long> CountVendasAsync(CancellationToken ct);
         Task<Cliente?> GetClienteByIdAsync(string id, CancellationToken ct);
         Task<Empresa?> GetEmpresaByIdAsync(string id, CancellationToken ct);
         Task<PlanoDeConta?> GetPlanoByIdAsync(string id, CancellationToken ct);
