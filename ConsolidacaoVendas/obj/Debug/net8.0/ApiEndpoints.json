@@ -1,8 +1,18 @@
 [
   {
     "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
+    "Method": "PostCancel",
+    "RelativePath": "VendasConsolidadas/Cancel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
     "Method": "Logs",
-    "RelativePath": "VendasConsolidadas/GetLogs",
+    "RelativePath": "VendasConsolidadas/Logs",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -12,7 +22,7 @@
   {
     "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
     "Method": "Progress",
-    "RelativePath": "VendasConsolidadas/GetProgress",
+    "RelativePath": "VendasConsolidadas/Progress",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -21,8 +31,18 @@
   },
   {
     "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
-    "Method": "GetVendasConsolidadas",
-    "RelativePath": "VendasConsolidadas/GetVendasConsolidadas",
+    "Method": "PostStart",
+    "RelativePath": "VendasConsolidadas/Start",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
+    "Method": "GetVendasConsolidadasAsync",
+    "RelativePath": "VendasConsolidadas/VendasConsolidadas",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -43,26 +63,6 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
-    "Method": "PostCancel",
-    "RelativePath": "VendasConsolidadas/PostCancel",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
-    "Method": "PostStart",
-    "RelativePath": "VendasConsolidadas/PostStart",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   }
 ]

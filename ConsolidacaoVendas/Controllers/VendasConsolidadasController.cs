@@ -1,5 +1,8 @@
-using Microsoft.AspNetCore.Mvc;
+using ConsolidacaoVendas.Models;
+using ConsolidacaoVendas.Mongo;
 using ConsolidacaoVendas.Services;
+using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
 
 namespace ConsolidacaoVendas.Controllers
 {
@@ -9,13 +12,15 @@ namespace ConsolidacaoVendas.Controllers
     {
         private readonly ILogger<VendasConsolidadasController> _logger;
         private readonly IVendasConsolidadasService _service;
-        public VendasConsolidadasController(ILogger<VendasConsolidadasController> logger, IVendasConsolidadasService service)
+        private readonly MongoContext _ctx;
+        public VendasConsolidadasController(ILogger<VendasConsolidadasController> logger, IVendasConsolidadasService service, MongoContext ctx)
         {
             _logger = logger;
             _service = service;
+            _ctx = ctx;
         }
 
-        [HttpPost("PostStart")]
+        [HttpPost("Start")]
         public IActionResult PostStart()
         {
             try {
@@ -30,24 +35,43 @@ namespace ConsolidacaoVendas.Controllers
 
 
 
-        [HttpGet("GetVendasConsolidadas")]
-        public IActionResult GetVendasConsolidadas([FromQuery] DateTime? from, [FromQuery] DateTime? to, [FromQuery] string? empresa)
+        [HttpGet("VendasConsolidadas")]
+        public async Task<IActionResult> GetVendasConsolidadasAsync([FromQuery] DateTime? from, [FromQuery] DateTime? to, [FromQuery] string? empresa)
         {
-            return Ok();
+            var coll = _ctx.DestinoDb.GetCollection<VendaConsolidada>("VendaConsolidada");
+            var builder = Builders<VendaConsolidada>.Filter;
+            var filter = builder.Empty;
+
+            if (from.HasValue) filter &= builder.Gte(x => x.Data, from.Value);
+            if (to.HasValue) filter &= builder.Lte(x => x.Data, to.Value);
+            if (!string.IsNullOrEmpty(empresa)) filter &= builder.Eq(x => x.EmpresaNome, empresa);
+
+            var list = await coll.Find(filter).ToListAsync();
+            var grouped = list
+                .GroupBy(v => new { Date = v.Data.Date, Empresa = v.EmpresaNome })
+                .Select(g => new {
+                    Date = g.Key.Date,
+                    Empresa = g.Key.Empresa,
+                    Total = g.Sum(x => x.Valor),
+                    Count = g.Count()
+                })
+                .OrderBy(x => x.Date);
+
+            return Ok(grouped);
         }
 
 
-        [HttpPost("PostCancel")]
+        [HttpPost("Cancel")]
         public IActionResult PostCancel()
         {
             _service.Cancel();
             return Ok(new { message = "Pedido de cancelamento enviado" });
         }
 
-        [HttpGet("GetProgress")]
+        [HttpGet("Progress")]
         public IActionResult Progress() => Ok(new { progress = _service.GetProgress() });
 
-        [HttpGet("GetLogs")]
+        [HttpGet("Logs")]
         public IActionResult Logs() => Ok(_service.GetLogs());
 
 

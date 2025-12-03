@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/VendasConsolidadas/PostStart": {
+    "/VendasConsolidadas/Start": {
       "post": {
         "tags": [
           "VendasConsolidadas"
@@ -17,7 +17,7 @@
         }
       }
     },
-    "/VendasConsolidadas/GetVendasConsolidadas": {
+    "/VendasConsolidadas/VendasConsolidadas": {
       "get": {
         "tags": [
           "VendasConsolidadas"
@@ -54,7 +54,7 @@
         }
       }
     },
-    "/VendasConsolidadas/PostCancel": {
+    "/VendasConsolidadas/Cancel": {
       "post": {
         "tags": [
           "VendasConsolidadas"
@@ -66,7 +66,7 @@
         }
       }
     },
-    "/VendasConsolidadas/GetProgress": {
+    "/VendasConsolidadas/Progress": {
       "get": {
         "tags": [
           "VendasConsolidadas"
@@ -78,7 +78,7 @@
         }
       }
     },
-    "/VendasConsolidadas/GetLogs": {
+    "/VendasConsolidadas/Logs": {
       "get": {
         "tags": [
           "VendasConsolidadas"

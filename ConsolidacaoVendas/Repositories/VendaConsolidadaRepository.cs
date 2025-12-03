@@ -31,6 +31,14 @@ namespace ConsolidacaoVendas.Repositories
             return _vendas.FindSync(filter, options);
         }
 
+        public async Task<long> CountVendasAsync(CancellationToken ct)
+        {
+            return await _vendas.CountDocumentsAsync(
+                filter: Builders<Venda>.Filter.Empty,
+                cancellationToken: ct
+            );
+        }
+
         public Task<Cliente?> GetClienteByIdAsync(string id, CancellationToken ct) =>
             _clientes.Find(c => c.ExternalId == id).FirstOrDefaultAsync(ct);
 
