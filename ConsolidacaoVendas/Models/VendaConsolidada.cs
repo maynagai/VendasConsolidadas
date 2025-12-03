@@ -1,8 +1,13 @@
-﻿namespace ConsolidacaoVendas.Models
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace ConsolidacaoVendas.Models
 {
     public class VendaConsolidada
     {
-        public string? Id { get; set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
         public string? IdDaVenda { get; set; } 
         public decimal Valor { get; set; }
         public DateTime Data { get; set; }

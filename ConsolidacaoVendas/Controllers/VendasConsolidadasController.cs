@@ -9,16 +9,17 @@ namespace ConsolidacaoVendas.Controllers
     {
         private readonly ILogger<VendasConsolidadasController> _logger;
         private readonly IVendasConsolidadasService _service;
-        public VendasConsolidadasController(ILogger<VendasConsolidadasController> logger)
+        public VendasConsolidadasController(ILogger<VendasConsolidadasController> logger, IVendasConsolidadasService service)
         {
             _logger = logger;
+            _service = service;
         }
 
         [HttpPost("PostStart")]
         public IActionResult PostStart()
         {
             try {
-                _=_service.Start();
+                _service.Start();
                 return Accepted(new { message = "Processo de consolidação iniciado" });
             }
             catch (InvalidOperationException ex)

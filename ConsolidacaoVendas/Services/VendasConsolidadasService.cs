@@ -1,7 +1,7 @@
 ﻿using  ConsolidacaoVendas.Log;
 using ConsolidacaoVendas.Models;
 using ConsolidacaoVendas.Repositories;
-using static ConsolidacaoVendas.Services.VendasConsolidadasService;
+using MongoDB.Bson;
 
 namespace ConsolidacaoVendas.Services
 {
@@ -16,6 +16,13 @@ namespace ConsolidacaoVendas.Services
         private CancellationTokenSource? cts;
         private readonly object check = new();
         private bool running = false;
+        public VendasConsolidadasService(IVendaConsolidadaRepository repo, ProgressTracker prog, LogTracker logs, ILogger<VendasConsolidadasService> logg)
+        {
+            repository = repo;
+            progress = prog;
+            log = logs;
+            logger = logg;
+        }
         public async Task Start(){
 
             lock (check)
@@ -58,7 +65,7 @@ namespace ConsolidacaoVendas.Services
 
                         var consolidada = new VendaConsolidada
                         {
-                            Id = Guid.NewGuid().ToString(),
+                            Id = ObjectId.GenerateNewId().ToString(),
                             IdDaVenda = venda.Id,
                             Valor = venda.Valor,
                             Data = venda.Data,

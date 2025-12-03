@@ -5,7 +5,7 @@ using ConsolidacaoVendas.Mongo;
 
 namespace ConsolidacaoVendas.Repositories
 {
-    public class VendaConsolidadaRepository
+    public class VendaConsolidadaRepository : IVendaConsolidadaRepository
     {
         private readonly MongoContext _ctx;
         private readonly IMongoCollection<Venda> _vendas;
@@ -32,13 +32,13 @@ namespace ConsolidacaoVendas.Repositories
         }
 
         public Task<Cliente?> GetClienteByIdAsync(string id, CancellationToken ct) =>
-            _clientes.Find(c => c.Id == id).FirstOrDefaultAsync(ct);
+            _clientes.Find(c => c.ExternalId == id).FirstOrDefaultAsync(ct);
 
         public Task<Empresa?> GetEmpresaByIdAsync(string id, CancellationToken ct) =>
-            _empresas.Find(e => e.Id == id).FirstOrDefaultAsync(ct);
+            _empresas.Find(e => e.ExternalId == id).FirstOrDefaultAsync(ct);
 
         public Task<PlanoDeConta?> GetPlanoByIdAsync(string id, CancellationToken ct) =>
-            _planos.Find(p => p.Id == id).FirstOrDefaultAsync(ct);
+            _planos.Find(p => p.ExternalId == id).FirstOrDefaultAsync(ct);
 
         public Task InsertVendasConsolidadasBulkAsync(IEnumerable<VendaConsolidada> items, CancellationToken ct) =>
             _vendasConsolidadas.InsertManyAsync(items, cancellationToken: ct);
