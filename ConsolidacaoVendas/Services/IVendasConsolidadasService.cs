@@ -2,6 +2,10 @@
 {
     public interface IVendasConsolidadasService
     {
-        Task start();
+        Task Start();
+        void Cancel();
+        IEnumerable<string> GetLogs();
+        int GetProgress();
+
     }
 }

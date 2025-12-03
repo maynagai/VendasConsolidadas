@@ -1,6 +1,23 @@
+using ConsolidacaoVendas.Log;
+using ConsolidacaoVendas.Mongo;
+using ConsolidacaoVendas.Repositories;
+using ConsolidacaoVendas.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.Configure<MongoSettings>(builder.Configuration.GetSection("MongoSettings"));
+var settings = builder.Configuration.GetSection("MongoSettings").Get<MongoSettings>();
+builder.Services.AddSingleton(settings);
+builder.Services.AddSingleton<MongoContext>();
+
+// shared
+builder.Services.AddSingleton<ProgressTracker>();
+builder.Services.AddSingleton<LogTracker>();
+
+// repos & services
+builder.Services.AddSingleton<IVendaConsolidadaRepository, VendaConsolidadaRepository>();
+builder.Services.AddSingleton<IVendasConsolidadasService, VendasConsolidadasService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

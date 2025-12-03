@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/VendasConsolidadas/PostStart": {
+    "/VendasConsolidadas/Start": {
       "post": {
         "tags": [
           "VendasConsolidadas"
@@ -17,10 +17,35 @@
         }
       }
     },
-    "/VendasConsolidadas/GetProgress": {
+    "/VendasConsolidadas/VendasConsolidadas": {
       "get": {
         "tags": [
           "VendasConsolidadas"
+        ],
+        "parameters": [
+          {
+            "name": "from",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "empresa",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -29,32 +54,32 @@
         }
       }
     },
-    "/VendasConsolidadas/GetLogs": {
-      "get": {
-        "tags": [
-          "VendasConsolidadas"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/VendasConsolidadas/GetVendasConsolidadas": {
-      "get": {
-        "tags": [
-          "VendasConsolidadas"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/VendasConsolidadas/PostCancel": {
+    "/VendasConsolidadas/Cancel": {
       "post": {
+        "tags": [
+          "VendasConsolidadas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/VendasConsolidadas/Progress": {
+      "get": {
+        "tags": [
+          "VendasConsolidadas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/VendasConsolidadas/Logs": {
+      "get": {
         "tags": [
           "VendasConsolidadas"
         ],

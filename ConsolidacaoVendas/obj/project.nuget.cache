@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nqCXzBGFkIk=",
+  "dgSpecHash": "ezw50eJ/BjE=",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\DesafioF360\\ConsolidacaoVendas\\ConsolidacaoVendas.csproj",
+  "projectFilePath": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\ConsolidacaoVendas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mayla\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\mayla\\.nuget\\packages\\microsoft.extensions.apidescription.server\\8.0.0\\microsoft.extensions.apidescription.server.8.0.0.nupkg.sha512",

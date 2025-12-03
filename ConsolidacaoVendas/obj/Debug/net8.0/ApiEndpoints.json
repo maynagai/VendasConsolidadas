@@ -1,39 +1,29 @@
 [
   {
     "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
-    "Method": "GetLogs",
-    "RelativePath": "VendasConsolidadas/GetLogs",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
-    "Method": "GetProgress",
-    "RelativePath": "VendasConsolidadas/GetProgress",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
-    "Method": "GetVendasConsolidadas",
-    "RelativePath": "VendasConsolidadas/GetVendasConsolidadas",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
     "Method": "PostCancel",
-    "RelativePath": "VendasConsolidadas/PostCancel",
+    "RelativePath": "VendasConsolidadas/Cancel",
     "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
+    "Method": "Logs",
+    "RelativePath": "VendasConsolidadas/Logs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
+    "Method": "Progress",
+    "RelativePath": "VendasConsolidadas/Progress",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -42,11 +32,37 @@
   {
     "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
     "Method": "PostStart",
-    "RelativePath": "VendasConsolidadas/PostStart",
+    "RelativePath": "VendasConsolidadas/Start",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
+    "Method": "GetVendasConsolidadasAsync",
+    "RelativePath": "VendasConsolidadas/VendasConsolidadas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "from",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "to",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "empresa",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   }
 ]

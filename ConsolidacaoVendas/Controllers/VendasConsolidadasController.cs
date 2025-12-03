@@ -1,5 +1,8 @@
-using Microsoft.AspNetCore.Mvc;
+using ConsolidacaoVendas.Models;
+using ConsolidacaoVendas.Mongo;
 using ConsolidacaoVendas.Services;
+using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
 
 namespace ConsolidacaoVendas.Controllers
 {
@@ -9,16 +12,19 @@ namespace ConsolidacaoVendas.Controllers
     {
         private readonly ILogger<VendasConsolidadasController> _logger;
         private readonly IVendasConsolidadasService _service;
-        public VendasConsolidadasController(ILogger<VendasConsolidadasController> logger)
+        private readonly MongoContext _ctx;
+        public VendasConsolidadasController(ILogger<VendasConsolidadasController> logger, IVendasConsolidadasService service, MongoContext ctx)
         {
             _logger = logger;
+            _service = service;
+            _ctx = ctx;
         }
 
-        [HttpPost("PostStart")]
+        [HttpPost("Start")]
         public IActionResult PostStart()
         {
             try {
-                _service.start();
+                _service.Start();
                 return Accepted(new { message = "Processo de consolidação iniciado" });
             }
             catch (InvalidOperationException ex)
@@ -27,29 +33,46 @@ namespace ConsolidacaoVendas.Controllers
             }
         }
 
-        [HttpGet("GetProgress")]
-        public IActionResult GetProgress()
+
+
+        [HttpGet("VendasConsolidadas")]
+        public async Task<IActionResult> GetVendasConsolidadasAsync([FromQuery] DateTime? from, [FromQuery] DateTime? to, [FromQuery] string? empresa)
         {
-            return Ok();
-        }
-        [HttpGet("GetLogs")]
-        public IActionResult GetLogs()
-        {
-            return Ok();
-        }
-        [HttpGet("GetVendasConsolidadas")]
-        public IActionResult GetVendasConsolidadas()
-        {
-            return Ok();
+            var coll = _ctx.DestinoDb.GetCollection<VendaConsolidada>("VendaConsolidada");
+            var builder = Builders<VendaConsolidada>.Filter;
+            var filter = builder.Empty;
+
+            if (from.HasValue) filter &= builder.Gte(x => x.Data, from.Value);
+            if (to.HasValue) filter &= builder.Lte(x => x.Data, to.Value);
+            if (!string.IsNullOrEmpty(empresa)) filter &= builder.Eq(x => x.EmpresaNome, empresa);
+
+            var list = await coll.Find(filter).ToListAsync();
+            var grouped = list
+                .GroupBy(v => new { Date = v.Data.Date, Empresa = v.EmpresaNome })
+                .Select(g => new {
+                    Date = g.Key.Date,
+                    Empresa = g.Key.Empresa,
+                    Total = g.Sum(x => x.Valor),
+                    Count = g.Count()
+                })
+                .OrderBy(x => x.Date);
+
+            return Ok(grouped);
         }
 
 
-        [HttpPost("PostCancel")]
+        [HttpPost("Cancel")]
         public IActionResult PostCancel()
         {
-            return Ok();
+            _service.Cancel();
+            return Ok(new { message = "Pedido de cancelamento enviado" });
         }
 
+        [HttpGet("Progress")]
+        public IActionResult Progress() => Ok(new { progress = _service.GetProgress() });
+
+        [HttpGet("Logs")]
+        public IActionResult Logs() => Ok(_service.GetLogs());
 
 
     }
