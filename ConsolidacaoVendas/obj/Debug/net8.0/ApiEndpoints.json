@@ -11,7 +11,7 @@
   },
   {
     "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
-    "Method": "GetProgress",
+    "Method": "Progress",
     "RelativePath": "VendasConsolidadas/GetProgress",
     "HttpMethod": "GET",
     "IsController": true,

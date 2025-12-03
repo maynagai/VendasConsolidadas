@@ -17,30 +17,6 @@
         }
       }
     },
-    "/VendasConsolidadas/GetProgress": {
-      "get": {
-        "tags": [
-          "VendasConsolidadas"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/VendasConsolidadas/GetLogs": {
-      "get": {
-        "tags": [
-          "VendasConsolidadas"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/VendasConsolidadas/GetVendasConsolidadas": {
       "get": {
         "tags": [
@@ -80,6 +56,30 @@
     },
     "/VendasConsolidadas/PostCancel": {
       "post": {
+        "tags": [
+          "VendasConsolidadas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/VendasConsolidadas/GetProgress": {
+      "get": {
+        "tags": [
+          "VendasConsolidadas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/VendasConsolidadas/GetLogs": {
+      "get": {
         "tags": [
           "VendasConsolidadas"
         ],

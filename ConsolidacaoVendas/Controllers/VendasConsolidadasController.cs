@@ -18,7 +18,7 @@ namespace ConsolidacaoVendas.Controllers
         public IActionResult PostStart()
         {
             try {
-                _=_service.start();
+                _=_service.Start();
                 return Accepted(new { message = "Processo de consolidação iniciado" });
             }
             catch (InvalidOperationException ex)
@@ -39,7 +39,8 @@ namespace ConsolidacaoVendas.Controllers
         [HttpPost("PostCancel")]
         public IActionResult PostCancel()
         {
-            return Ok();
+            _service.Cancel();
+            return Ok(new { message = "Pedido de cancelamento enviado" });
         }
 
         [HttpGet("GetProgress")]
