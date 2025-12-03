@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
-    "Method": "GetLogs",
+    "Method": "Logs",
     "RelativePath": "VendasConsolidadas/GetLogs",
     "HttpMethod": "GET",
     "IsController": true,

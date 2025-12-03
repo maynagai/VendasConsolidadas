@@ -27,16 +27,8 @@ namespace ConsolidacaoVendas.Controllers
             }
         }
 
-        [HttpGet("GetProgress")]
-        public IActionResult GetProgress()
-        {
-            return Ok();
-        }
-        [HttpGet("GetLogs")]
-        public IActionResult GetLogs()
-        {
-            return Ok();
-        }
+
+
         [HttpGet("GetVendasConsolidadas")]
         public IActionResult GetVendasConsolidadas([FromQuery] DateTime? from, [FromQuery] DateTime? to, [FromQuery] string? empresa)
         {
@@ -50,6 +42,11 @@ namespace ConsolidacaoVendas.Controllers
             return Ok();
         }
 
+        [HttpGet("GetProgress")]
+        public IActionResult Progress() => Ok(new { progress = _service.GetProgress() });
+
+        [HttpGet("GetLogs")]
+        public IActionResult Logs() => Ok(_service.GetLogs());
 
 
     }
