@@ -32,7 +32,14 @@ namespace ConsolidacaoVendas.Controllers
         }
 
 
-        [HttpGet("VendasConsolidadas")]
+        [HttpPost("Cancel")]
+        public IActionResult PostCancel()
+        {
+            _service.Cancel();
+            return Ok(new { message = "Pedido de cancelamento enviado" });
+        }
+
+        [HttpGet("Search")]
         public async Task<IActionResult> GetVendasConsolidadasDetalhadasAsync(
             [FromQuery] DateTime? from,
             [FromQuery] DateTime? to,
@@ -80,13 +87,6 @@ namespace ConsolidacaoVendas.Controllers
             });
         }
 
-
-        [HttpPost("Cancel")]
-        public IActionResult PostCancel()
-        {
-            _service.Cancel();
-            return Ok(new { message = "Pedido de cancelamento enviado" });
-        }
 
         [HttpGet("Progress")]
         public IActionResult Progress() => Ok(new { 

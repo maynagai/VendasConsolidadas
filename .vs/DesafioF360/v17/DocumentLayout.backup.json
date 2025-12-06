@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Projetos\\VendasConsolidadas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|d:\\projetos\\vendasconsolidadas\\consolidacaovendas\\controllers\\vendasconsolidadascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|solutionrelative:consolidacaovendas\\controllers\\vendasconsolidadascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|d:\\projetos\\vendasconsolidadas\\consolidacaovendas\\services\\vendasconsolidadasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|solutionrelative:consolidacaovendas\\services\\vendasconsolidadasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|d:\\projetos\\vendasconsolidadas\\consolidacaovendas\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|solutionrelative:consolidacaovendas\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|d:\\projetos\\vendasconsolidadas\\consolidacaovendas\\controllers\\vendasconsolidadascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|solutionrelative:consolidacaovendas\\controllers\\vendasconsolidadascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|d:\\projetos\\vendasconsolidadas\\consolidacaovendas\\repositories\\vendaconsolidadarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,9 +43,6 @@
       "RelativeMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|solutionrelative:consolidacaovendas\\log\\progresstracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mayla\\AppData\\Local\\SourceServer\\6a42cae49c06b4c39ba7b8c24ec62a216d6cedc0b45a502ecc0a25198bb96e2e\\ConsolidacaoVendas\\Services\\VendasConsolidadasService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|d:\\projetos\\vendasconsolidadas\\consolidacaovendas\\models\\vendaconsolidada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|solutionrelative:consolidacaovendas\\models\\vendaconsolidada.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -52,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|d:\\projetos\\vendasconsolidadas\\consolidacaovendas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|solutionrelative:consolidacaovendas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|d:\\projetos\\vendasconsolidadas\\consolidacaovendas\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|solutionrelative:consolidacaovendas\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9F833C85-2113-46AD-A961-BA708F8BE356}|ConsolidacaoVendas\\ConsolidacaoVendas.csproj|d:\\projetos\\vendasconsolidadas\\consolidacaovendas\\models\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -73,22 +70,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "VendasConsolidadasService.cs",
-              "DocumentMoniker": "C:\\Users\\mayla\\AppData\\Local\\SourceServer\\6a42cae49c06b4c39ba7b8c24ec62a216d6cedc0b45a502ecc0a25198bb96e2e\\ConsolidacaoVendas\\Services\\VendasConsolidadasService.cs",
-              "ToolTip": "C:\\Users\\mayla\\AppData\\Local\\SourceServer\\6a42cae49c06b4c39ba7b8c24ec62a216d6cedc0b45a502ecc0a25198bb96e2e\\ConsolidacaoVendas\\Services\\VendasConsolidadasService.cs [Somente Leitura]",
-              "ViewState": "AgIAADYAAAAAAAAAAAAwwDQAAABRAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T19:20:41.904Z",
-              "EditorCaption": " [Somente Leitura]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "Cliente.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "ConsolidacaoVendas\\Models\\Cliente.cs",
@@ -96,11 +82,12 @@
               "RelativeToolTip": "ConsolidacaoVendas\\Models\\Cliente.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwAwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T12:02:36.984Z"
+              "WhenOpened": "2025-12-03T12:02:36.984Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "Empresa.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Models\\Empresa.cs",
               "RelativeDocumentMoniker": "ConsolidacaoVendas\\Models\\Empresa.cs",
@@ -136,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "Venda.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Models\\Venda.cs",
               "RelativeDocumentMoniker": "ConsolidacaoVendas\\Models\\Venda.cs",
@@ -148,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MongoContext.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Mongo\\MongoContext.cs",
               "RelativeDocumentMoniker": "ConsolidacaoVendas\\Mongo\\MongoContext.cs",
@@ -161,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "IVendaConsolidadaRepository.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Repositories\\IVendaConsolidadaRepository.cs",
               "RelativeDocumentMoniker": "ConsolidacaoVendas\\Repositories\\IVendaConsolidadaRepository.cs",
@@ -174,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "VendaConsolidadaRepository.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Repositories\\VendaConsolidadaRepository.cs",
               "RelativeDocumentMoniker": "ConsolidacaoVendas\\Repositories\\VendaConsolidadaRepository.cs",
@@ -187,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "LogTracker.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Log\\LogTracker.cs",
               "RelativeDocumentMoniker": "ConsolidacaoVendas\\Log\\LogTracker.cs",
@@ -200,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ProgressTracker.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Log\\ProgressTracker.cs",
               "RelativeDocumentMoniker": "ConsolidacaoVendas\\Log\\ProgressTracker.cs",
@@ -213,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\appsettings.json",
               "RelativeDocumentMoniker": "ConsolidacaoVendas\\appsettings.json",
@@ -226,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IVendasConsolidadasService.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Services\\IVendasConsolidadasService.cs",
               "RelativeDocumentMoniker": "ConsolidacaoVendas\\Services\\IVendasConsolidadasService.cs",
@@ -239,26 +226,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "VendasConsolidadasService.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Services\\VendasConsolidadasService.cs",
               "RelativeDocumentMoniker": "ConsolidacaoVendas\\Services\\VendasConsolidadasService.cs",
               "ToolTip": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Services\\VendasConsolidadasService.cs",
               "RelativeToolTip": "ConsolidacaoVendas\\Services\\VendasConsolidadasService.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAIwFkAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAwwFUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T20:23:15.375Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "VendasConsolidadasController.cs",
               "DocumentMoniker": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Controllers\\VendasConsolidadasController.cs",
               "RelativeDocumentMoniker": "ConsolidacaoVendas\\Controllers\\VendasConsolidadasController.cs",
-              "ToolTip": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Controllers\\VendasConsolidadasController.cs*",
-              "RelativeToolTip": "ConsolidacaoVendas\\Controllers\\VendasConsolidadasController.cs*",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAwCsAAAAtAAAAAAAAAA==",
+              "ToolTip": "D:\\Projetos\\VendasConsolidadas\\ConsolidacaoVendas\\Controllers\\VendasConsolidadasController.cs",
+              "RelativeToolTip": "ConsolidacaoVendas\\Controllers\\VendasConsolidadasController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T20:23:04.997Z",
               "EditorCaption": ""
