@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsolidacaoVendas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fa99ea124024f075c1e539f476423a4dd07eb6c")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b691605292c123113b526f9e520347cfed6a1663")]
->>>>>>> origin/ApiGet
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39a6c95ee5d0b37cd2d6b67df67e3f4f6eda8fe0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsolidacaoVendas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsolidacaoVendas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

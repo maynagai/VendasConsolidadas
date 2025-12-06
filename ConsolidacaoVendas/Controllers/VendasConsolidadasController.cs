@@ -10,12 +10,10 @@ namespace ConsolidacaoVendas.Controllers
     [Route("[controller]")]
     public class VendasConsolidadasController : ControllerBase
     {
-        private readonly ILogger<VendasConsolidadasController> _logger;
         private readonly IVendasConsolidadasService _service;
         private readonly MongoContext _ctx;
-        public VendasConsolidadasController(ILogger<VendasConsolidadasController> logger, IVendasConsolidadasService service, MongoContext ctx)
+        public VendasConsolidadasController(IVendasConsolidadasService service, MongoContext ctx)
         {
-            _logger = logger;
             _service = service;
             _ctx = ctx;
         }
@@ -34,9 +32,11 @@ namespace ConsolidacaoVendas.Controllers
         }
 
 
-
         [HttpGet("VendasConsolidadas")]
-        public async Task<IActionResult> GetVendasConsolidadasAsync([FromQuery] DateTime? from, [FromQuery] DateTime? to, [FromQuery] string? empresa)
+        public async Task<IActionResult> GetVendasConsolidadasDetalhadasAsync(
+    [FromQuery] DateTime? from,
+    [FromQuery] DateTime? to,
+    [FromQuery] string? empresa)
         {
             var coll = _ctx.DestinoDb.GetCollection<VendaConsolidada>("VendaConsolidada");
             var builder = Builders<VendaConsolidada>.Filter;
@@ -46,18 +46,10 @@ namespace ConsolidacaoVendas.Controllers
             if (to.HasValue) filter &= builder.Lte(x => x.Data, to.Value);
             if (!string.IsNullOrEmpty(empresa)) filter &= builder.Eq(x => x.EmpresaNome, empresa);
 
-            var list = await coll.Find(filter).ToListAsync();
-            var grouped = list
-                .GroupBy(v => new { Date = v.Data.Date, Empresa = v.EmpresaNome })
-                .Select(g => new {
-                    Date = g.Key.Date,
-                    Empresa = g.Key.Empresa,
-                    Total = g.Sum(x => x.Valor),
-                    Count = g.Count()
-                })
-                .OrderBy(x => x.Date);
 
-            return Ok(grouped);
+            var list = await coll.Find(filter).ToListAsync();
+
+            return Ok(list);
         }
 
 

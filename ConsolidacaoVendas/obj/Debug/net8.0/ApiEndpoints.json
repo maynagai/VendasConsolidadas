@@ -41,7 +41,7 @@
   },
   {
     "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
-    "Method": "GetVendasConsolidadasAsync",
+    "Method": "GetVendasConsolidadasDetalhadasAsync",
     "RelativePath": "VendasConsolidadas/VendasConsolidadas",
     "HttpMethod": "GET",
     "IsController": true,

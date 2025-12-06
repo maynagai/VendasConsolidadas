@@ -1,4 +1,6 @@
-﻿namespace ConsolidacaoVendas.Log
+﻿using System.Diagnostics;
+
+namespace ConsolidacaoVendas.Log
 {
     public class ProgressTracker
     {
@@ -10,7 +12,14 @@
 
         public void IncrementProcessed(long count = 1)
             => Interlocked.Add(ref _processed, count);
+        
+        public void ResetProcessed() => Interlocked.Exchange(ref _processed, 0);
 
+        public void ResetAll()
+        {
+            Interlocked.Exchange(ref _total, 0);
+            Interlocked.Exchange(ref _processed, 0);
+        }
         public int PercentComplete
         {
             get

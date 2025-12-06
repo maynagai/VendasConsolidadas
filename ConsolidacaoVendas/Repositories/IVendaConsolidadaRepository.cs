@@ -6,10 +6,15 @@ namespace ConsolidacaoVendas.Repositories
     public interface IVendaConsolidadaRepository
     {
         IAsyncCursor<Venda> GetVendasCursor();
+
         Task<long> CountVendasAsync(CancellationToken ct);
-        Task<Cliente?> GetClienteByIdAsync(string id, CancellationToken ct);
-        Task<Empresa?> GetEmpresaByIdAsync(string id, CancellationToken ct);
-        Task<PlanoDeConta?> GetPlanoByIdAsync(string id, CancellationToken ct);
+
+        Task<List<Cliente>> GetAllClientesAsync(CancellationToken ct);
+        Task<List<Empresa>> GetAllEmpresasAsync(CancellationToken ct);
+        Task<List<PlanoDeConta>> GetAllPlanosAsync(CancellationToken ct);
+
+        IMongoCollection<VendaConsolidada> GetVendasConsolidadasCollection();
         Task InsertVendasConsolidadasBulkAsync(IEnumerable<VendaConsolidada> items, CancellationToken ct);
     }
+
 }
