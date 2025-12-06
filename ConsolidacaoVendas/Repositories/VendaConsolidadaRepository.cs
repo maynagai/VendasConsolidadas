@@ -30,7 +30,6 @@ namespace ConsolidacaoVendas.Repositories
 
         private void CriarIndicesSeNecessario()
         {
-            // Lookup via ExternalId ficou super rápido
             _clientes.Indexes.CreateOne(
                 new CreateIndexModel<Cliente>(
                     Builders<Cliente>.IndexKeys.Ascending(c => c.ExternalId),
@@ -96,8 +95,8 @@ namespace ConsolidacaoVendas.Repositories
 
             var options = new InsertManyOptions
             {
-                IsOrdered = false, // Não trava em erro
-                BypassDocumentValidation = true // + desempenho
+                IsOrdered = false, 
+                BypassDocumentValidation = true 
             };
 
             return _vendasConsolidadas.InsertManyAsync(items, options, ct);

@@ -31,18 +31,8 @@
   },
   {
     "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
-    "Method": "PostStart",
-    "RelativePath": "VendasConsolidadas/Start",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
     "Method": "GetVendasConsolidadasDetalhadasAsync",
-    "RelativePath": "VendasConsolidadas/VendasConsolidadas",
+    "RelativePath": "VendasConsolidadas/Search",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -73,6 +63,16 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsolidacaoVendas.Controllers.VendasConsolidadasController",
+    "Method": "PostStart",
+    "RelativePath": "VendasConsolidadas/Start",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

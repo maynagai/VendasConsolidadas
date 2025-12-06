@@ -63,7 +63,6 @@ namespace ConsolidacaoVendas.Services
                     {
                         ct.ThrowIfCancellationRequested();
 
-                        // Lookups agora são O(1) e não geram query
                         empresas.TryGetValue(venda.EmpresaId, out var empresa);
                         planos.TryGetValue(venda.PlanoDeContaId, out var plano);
 
@@ -96,15 +95,6 @@ namespace ConsolidacaoVendas.Services
                     }
                 }
 
-                // Batch final
-                if (batch.Count > 0)
-                {
-                    await repository.InsertVendasConsolidadasBulkAsync(batch, ct);
-                    foreach (var item in batch)
-                        _consolidadasInseridas.Add(item.Id);
-
-                    log.Add($"Batch final inserido: {batch.Count} itens.");
-                }
 
                 watch.Stop();
                 log.Add($"Consolidação concluída em {watch.Elapsed}.");
@@ -137,12 +127,11 @@ namespace ConsolidacaoVendas.Services
                     log.Add("Erro ao remover vendas consolidadas após cancelamento.");
                 }
 
-                // Resetar progresso
+
                 progress.SetTotal(0);
                 progress.ResetProcessed();
                 log.Add("Progresso resetado para zero.");
 
-                // Limpando rastreamento
                 _consolidadasInseridas.Clear();
             }
 
@@ -178,7 +167,6 @@ namespace ConsolidacaoVendas.Services
         public IEnumerable<string> GetLogs() => log.GetAll();
         public int GetProgress() => progress.PercentComplete;
         public long GetTotal() => progress.Total;
-
         public long GetProcessed() => progress.Processed;
     }
         
