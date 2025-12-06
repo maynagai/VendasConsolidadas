@@ -108,7 +108,7 @@ Exemplo:
   " 06/12/2025 12:37:37 - Erro durante consolidação"
 }
 ```
-### ▶ GET /vendas-consolidadas
+### ▶ GET / Search
 
 Retorna as vendas consolidadas do banco de destino, agrupadas por data e empresa.
 
