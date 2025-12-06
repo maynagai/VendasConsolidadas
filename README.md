@@ -109,8 +109,7 @@ Exemplo:
 }
 ```
 ### ▶ GET / Search
-
-Retorna as vendas consolidadas do banco de destino, agrupadas por data e empresa.
+Retorna as vendas consolidadas armazenadas no banco de destino, agrupadas por data e por empresa. Foi implementada uma paginação para realizar a busca quando os filtros não são informados, evitando retornar um volume excessivo de dados.
 
 Exemplo:
 ```
