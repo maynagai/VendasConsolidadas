@@ -26,9 +26,7 @@ Ela foi projetada para simular cenários reais de processamento massivo de dados
 
 - .NET 8  
 - MongoDB Driver  
-- ASP.NET Core Web API  
 - C# 
-- Task Parallel / async-await
 
 ---
 
