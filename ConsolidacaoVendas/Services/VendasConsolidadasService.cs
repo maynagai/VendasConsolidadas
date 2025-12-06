@@ -177,6 +177,9 @@ namespace ConsolidacaoVendas.Services
 
         public IEnumerable<string> GetLogs() => log.GetAll();
         public int GetProgress() => progress.PercentComplete;
+        public long GetTotal() => progress.Total;
+
+        public long GetProcessed() => progress.Processed;
     }
         
 }

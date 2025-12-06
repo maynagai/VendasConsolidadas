@@ -34,22 +34,50 @@ namespace ConsolidacaoVendas.Controllers
 
         [HttpGet("VendasConsolidadas")]
         public async Task<IActionResult> GetVendasConsolidadasDetalhadasAsync(
-    [FromQuery] DateTime? from,
-    [FromQuery] DateTime? to,
-    [FromQuery] string? empresa)
+            [FromQuery] DateTime? from,
+            [FromQuery] DateTime? to,
+            [FromQuery] string? empresa,
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 1000)
         {
+            if (page <= 0) page = 1;
+            if (pageSize <= 0) pageSize = 1000;
+
             var coll = _ctx.DestinoDb.GetCollection<VendaConsolidada>("VendaConsolidada");
             var builder = Builders<VendaConsolidada>.Filter;
-            var filter = builder.Empty;
 
-            if (from.HasValue) filter &= builder.Gte(x => x.Data, from.Value);
-            if (to.HasValue) filter &= builder.Lte(x => x.Data, to.Value);
-            if (!string.IsNullOrEmpty(empresa)) filter &= builder.Eq(x => x.EmpresaNome, empresa);
+            var filters = new List<FilterDefinition<VendaConsolidada>>();
 
+            if (from.HasValue)
+                filters.Add(builder.Gte(x => x.Data, from.Value));
 
-            var list = await coll.Find(filter).ToListAsync();
+            if (to.HasValue)
+                filters.Add(builder.Lte(x => x.Data, to.Value));
 
-            return Ok(list);
+            if (!string.IsNullOrWhiteSpace(empresa))
+                filters.Add(builder.Eq(x => x.EmpresaNome, empresa));
+
+            var finalFilter =
+                filters.Count == 0 ? FilterDefinition<VendaConsolidada>.Empty
+                                   : builder.And(filters);
+
+            var total = await coll.CountDocumentsAsync(finalFilter);
+
+            var skip = (page - 1) * pageSize;
+
+            var items = await coll.Find(finalFilter)
+                                  .Skip(skip)
+                                  .Limit(pageSize)
+                                  .ToListAsync();
+
+            return Ok(new
+            {
+                page,
+                pageSize,
+                total,
+                totalPages = (int)Math.Ceiling((double)total / pageSize),
+                items
+            });
         }
 
 
@@ -61,7 +89,12 @@ namespace ConsolidacaoVendas.Controllers
         }
 
         [HttpGet("Progress")]
-        public IActionResult Progress() => Ok(new { progress = _service.GetProgress() });
+        public IActionResult Progress() => Ok(new { 
+            progresso = _service.GetProgress() +"%",
+            total = _service.GetTotal(),
+            processados =_service.GetProcessed()
+
+        });
 
         [HttpGet("Logs")]
         public IActionResult Logs() => Ok(_service.GetLogs());

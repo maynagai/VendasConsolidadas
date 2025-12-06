@@ -6,6 +6,8 @@
         void Cancel();
         IEnumerable<string> GetLogs();
         int GetProgress();
+        long GetTotal();
+        long GetProcessed();
 
     }
 }
