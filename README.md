@@ -26,9 +26,7 @@ Ela foi projetada para simular cenários reais de processamento massivo de dados
 
 - .NET 8  
 - MongoDB Driver  
-- ASP.NET Core Web API  
 - C# 
-- Task Parallel / async-await
 
 ---
 
@@ -110,9 +108,8 @@ Exemplo:
   " 06/12/2025 12:37:37 - Erro durante consolidação"
 }
 ```
-### ▶ GET /vendas-consolidadas
-
-Retorna as vendas consolidadas do banco de destino, agrupadas por data e empresa.
+### ▶ GET / Search
+Retorna as vendas consolidadas armazenadas no banco de destino, agrupadas por data e por empresa. Foi implementada uma paginação para realizar a busca quando os filtros não são informados, evitando retornar um volume excessivo de dados.
 
 Exemplo:
 ```
